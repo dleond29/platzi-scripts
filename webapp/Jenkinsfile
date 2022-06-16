@@ -2,11 +2,13 @@ pipeline {
   agent any
 
   options {
+    //Cuanto tiempo deben correr los test
     timeout(time: 2, unit: 'MINUTES')
   }
 
   environment {
-    ARTIFACT_ID = "elbuo8/webapp:${env.BUILD_NUMBER}"
+    //Definimos el artifact
+    ARTIFACT_ID = "dleond/webapp:${env.BUILD_NUMBER}"
   }
 
   stages {
